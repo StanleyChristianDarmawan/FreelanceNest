@@ -19,6 +19,9 @@ export default {
       },
       fontFamily:{
         sora: ['sora', 'sans-serif']
+      },
+      height:{
+        'customVH' : '70vh'
       }
     },
   },

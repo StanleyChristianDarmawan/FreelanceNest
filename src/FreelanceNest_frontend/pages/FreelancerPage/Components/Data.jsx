@@ -50,7 +50,97 @@ const Data = [
         price: "2",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         status: "Status: Selection Phase End in 2 Days!"
-    }
+    },
+    {
+        id: "6",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
+    {
+        id: "7",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
+    {
+        id: "8",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
+    {
+        id: "9",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
+    {
+        id: "10",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
+    {
+        id: "11",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
+    {
+        id: "12",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
+    {
+        id: "13",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
+    {
+        id: "14",
+        title: "Tes",
+        category: "Other",
+        img: PP,
+        company: "Sealana",
+        price: "2",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        status: "Status: Selection Phase End in 2 Days!"
+    },
 ];
 
 export default Data;
