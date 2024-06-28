@@ -14,5 +14,9 @@
   "type": "module",
   "workspaces": [
     "src/FreelanceNest_frontend"
-  ]
+  ],
+  "dependencies": {
+    "@dfinity/identity": "^1.4.0",
+    "react-router-dom": "^6.24.0"
+  }
 }

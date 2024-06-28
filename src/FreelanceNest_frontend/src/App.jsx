@@ -1,31 +1,26 @@
-import { useState } from 'react';
-import { FreelanceNest_backend } from 'declarations/FreelanceNest_backend';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FreelancerPage from "../pages/FreelancerPage/FreelancerPage";
+import CompanyPage from "../pages/CompanyPage/CompanyPage"
+import Landing from "../pages/LandingPage/LandingPage"
+import User from "./User"
+import LoginPage from '../pages/LoginPage/LoginPage';
+import RegisterPage from '../pages/RegisterPage/RegisterPage'; 
+import "./index.scss"
 
 function App() {
-  const [greeting, setGreeting] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    FreelanceNest_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/freelancer/*" element={<FreelancerPage />} />
+          <Route path="/company/*" element={<CompanyPage />} />
+        </Routes>
+      </Router>
+    </div>
   );
-}
+};
 
 export default App;
