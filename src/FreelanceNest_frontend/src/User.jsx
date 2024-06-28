@@ -10,11 +10,11 @@ function User(){
                     <h2 className="text-white font-sans text-2xl">Who are you?</h2>
                 </div>
                 <div className="flex gap-10">
-                    <Link to = "/freelancer" className="border border-customDarkerWhite border-opacity-50 hover:border-opacity-100 rounded-lg w-96 h-72 flex flex-col items-center justify-center">
+                    <Link to = "/freelancer-regist" className="border border-customDarkerWhite border-opacity-50 hover:border-opacity-100 rounded-lg w-96 h-72 flex flex-col items-center justify-center">
                         <h3 className="font-sans text-white text-2xl font-medium">I'm a Freelancer</h3>
                         <p className="font-sans text-white text-center text-lg font-light mx-4">I want to work for someone else's project and get paid.</p>
                     </Link>
-                    <Link to = "/company" className="border border-customDarkerWhite border-opacity-50 hover:border-opacity-100 rounded-lg w-96 h-72 flex flex-col items-center justify-center">
+                    <Link to = "/company-regist" className="border border-customDarkerWhite border-opacity-50 hover:border-opacity-100 rounded-lg w-96 h-72 flex flex-col items-center justify-center">
                         <h3 className="font-sans text-white text-2xl font-medium">I'm a Company</h3>
                         <p className="font-sans text-white text-center text-lg font-light mx-4">I want to hire someone to do my project and reward them.</p>
                     </Link>

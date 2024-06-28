@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FreelancerPage from "../pages/FreelancerPage/FreelancerPage";
 import CompanyPage from "../pages/CompanyPage/CompanyPage"
+import FreelancerForm from "../pages/FreelancerPage/form";
+import CompanyForm from "../pages/CompanyPage/form";
 import Landing from "../pages/LandingPage/LandingPage"
 import User from "./User"
-import LoginPage from '../pages/LoginPage/LoginPage';
-import RegisterPage from '../pages/RegisterPage/RegisterPage'; 
 import "./index.scss"
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/user" element={<User />} />
-          <Route path="/freelancer/*" element={<FreelancerPage />} />
-          <Route path="/company/*" element={<CompanyPage />} />
+          <Route path="/freelancer-regist" element={<FreelancerForm />} />
+          <Route path="/company-regist" element={<CompanyForm />} />
         </Routes>
       </Router>
     </div>
