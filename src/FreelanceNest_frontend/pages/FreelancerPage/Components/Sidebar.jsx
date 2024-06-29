@@ -29,11 +29,6 @@ function Sidebar(props) {
                             <h2 className="text-white text-lg">FreelanceNest</h2>
                         </div>
                         <div className="h-auto w-full flex flex-col gap-2 mt-5">
-                            <Link to="home" className={`w-full h-16 flex items-center gap-2.5 rounded-lg hover:bg-customGray active:bg-customDarkerGray ${activeMenu === 0 ? 'bg-customGray' : ''}`} onClick={(e) => handleMenuClick(0, e)}>
-                                <img src={Element[0].icon} alt="icon" className={`ml-4 w-7 ${activeMenu === 0 ? 'opacity-100' : 'opacity-70'}`} />
-                                <h3 className={`text-white text-xl font-medium ${activeMenu === 0 ? 'opacity-100' : 'opacity-70'}`}>{Element[0].menu}</h3>
-                            </Link>
-
                             <Link to="jobs" className={`w-full h-16 flex items-center gap-2.5 rounded-lg hover:bg-customGray active:bg-customDarkerGray ${activeMenu === 1 ? 'bg-customGray' : ''}`} onClick={(e) => handleMenuClick(1, e)}>
                                 <img src={Element[1].icon} alt="icon" className={`ml-4 w-7 ${activeMenu === 1 ? 'opacity-100' : 'opacity-70'}`} />
                                 <h3 className={`text-white text-xl font-medium ${activeMenu === 1 ? 'opacity-100' : 'opacity-70'}`}>{Element[1].menu}</h3>

@@ -1,12 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Impor Link dari react-router-dom
+import { Link, useNavigate } from "react-router-dom"; // Impor Link dan useNavigate dari react-router-dom
 
 function FreelancerForm() {
   const [firstName, setFirstName] = useState("");
   const [firstNameTouched, setFirstNameTouched] = useState(false);
+  const navigate = useNavigate(); // Inisialisasi useNavigate
 
   const isFormValid = () => {
     return firstName.trim().length > 0;
+  };
+
+  const handleNextClick = (e) => {
+    if (isFormValid()) {
+      navigate("/freelancer-page/jobs"); // Arahkan ke halaman freelancer-page dan menu jobs
+    } else {
+      e.preventDefault();
+    }
   };
 
   return (
@@ -61,17 +70,16 @@ function FreelancerForm() {
               placeholder="e.g linkedin.com/in/username"
             />
           </div>
-          <Link
-            to="/freelancer-page" // Tentukan rute tujuan
+          <button
             className={`border border-white flex justify-center items-center bg-black h-16 w-1/4 self-end mt-8 text-white text-lg rounded-md ${
               isFormValid()
                 ? "hover:bg-white hover:text-black"
                 : "opacity-50 cursor-not-allowed"
             }`}
-            onClick={(e) => (!isFormValid() ? e.preventDefault() : null)} // Mencegah navigasi jika form tidak valid
+            onClick={handleNextClick} // Gunakan handleNextClick untuk navigasi
           >
             Next
-          </Link>
+          </button>
         </div>
       </div>
     </div>
