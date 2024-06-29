@@ -21,7 +21,11 @@ export default {
         sora: ['sora', 'sans-serif']
       },
       height:{
-        'customVH' : '70vh'
+        'customVH' : '70vh',
+        'customHeight' : '80vh'
+      },
+      width:{
+        'customWidth' : '77.5vh'
       }
     },
   },
