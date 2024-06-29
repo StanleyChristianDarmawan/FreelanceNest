@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Statistics from "./Statistics";
 import PP from "../assets/icon/profile-removebg-preview.png";
+import { FaCamera } from "react-icons/fa"; // Ensure you have react-icons installed
 
 const Profile = () => {
   const [bio, setBio] = useState("Lorem ipsum dolores...");
   const [links, setLinks] = useState(["Link 1", "Link 2", "Link 3"]);
+  const [profilePhoto, setProfilePhoto] = useState(PP);
   const [isEditing, setIsEditing] = useState(false);
+
+  const fileInputRef = useRef(null);
 
   const handleBioChange = (e) => {
     setBio(e.target.value);
@@ -17,12 +21,21 @@ const Profile = () => {
     setLinks(newLinks);
   };
 
-  const handleEditClick = () => {
-    setIsEditing(true);
+  const handlePhotoChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfilePhoto(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
-  const handleSaveClick = () => {
-    setIsEditing(false);
+  const handleImageClick = () => {
+    if (isEditing) {
+      fileInputRef.current.click();
+    }
   };
 
   return (
@@ -30,8 +43,31 @@ const Profile = () => {
       <div className="w-1/2 p-6 shadow-md rounded-lg">
         <div className="flex flex-col items-start h-full">
           <div className="flex items-center mb-6">
-            <img src={PP} alt="Profile" className="w-48 h-48 rounded-full" />
-            <h2 className="font-sans text-4xl text-white font-bold ml-4">George Hansel</h2>
+            <div className="relative mr-4">
+              <img
+                src={profilePhoto}
+                alt="Profile"
+                className="w-48 h-48 rounded-full cursor-default"
+                onClick={handleImageClick}
+              />
+              {isEditing && (
+                <>
+                  <div
+                    className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full opacity-0 hover:opacity-100 cursor-pointer"
+                    onClick={handleImageClick}
+                  >
+                    <FaCamera className="text-white text-3xl" />
+                  </div>
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handlePhotoChange}
+                    className="hidden"
+                  />
+                </>
+              )}
+            </div>
+            <h2 className="font-sans text-4xl text-white font-bold">George Hansel</h2>
           </div>
           <div className="w-full">
             <h3 className="text-2xl text-white font-semibold mb-4">BIO</h3>
@@ -72,14 +108,14 @@ const Profile = () => {
             {isEditing ? (
               <button
                 className="border-white border w-32 hover:bg-white hover:text-black font-medium text-white p-4 rounded-lg text-xl"
-                onClick={handleSaveClick}
+                onClick={() => setIsEditing(false)}
               >
                 Save
               </button>
             ) : (
               <button
                 className="border-white border w-44 hover:bg-white hover:text-black font-medium text-white p-4 rounded-lg text-xl"
-                onClick={handleEditClick}
+                onClick={() => setIsEditing(true)}
               >
                 Edit Profile
               </button>

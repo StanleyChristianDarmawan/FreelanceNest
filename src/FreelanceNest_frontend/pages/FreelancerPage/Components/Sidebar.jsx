@@ -39,16 +39,22 @@ function Sidebar(props) {
                                 <h3 className={`text-white text-xl font-medium ${activeMenu === 1 ? 'opacity-100' : 'opacity-70'}`}>{Element[1].menu}</h3>
                             </Link>
 
+                            <Link to="project" className={`w-full h-16 flex items-center gap-2.5 rounded-lg hover:bg-customGray active:bg-customDarkerGray ${activeMenu === 3 ? 'bg-customGray' : ''}`} onClick={(e) => handleMenuClick(3, e)}>
+                                <img src={Element[3].icon} alt="icon" className={`ml-4 w-7 ${activeMenu === 3 ? 'opacity-100' : 'opacity-70'}`} />
+                                <h3 className={`text-white text-xl font-medium ${activeMenu === 3 ? 'opacity-100' : 'opacity-70'}`}>{Element[3].menu}</h3>
+                            </Link>
+
                             <Link to="profile" className={`w-full h-16 flex items-center gap-2.5 rounded-lg hover:bg-customGray active:bg-customDarkerGray ${activeMenu === 2 ? 'bg-customGray' : ''}`} onClick={(e) => handleMenuClick(2, e)}>
                                 <img src={Element[2].icon} alt="icon" className={`ml-4 w-7 ${activeMenu === 2 ? 'opacity-100' : 'opacity-70'}`} />
                                 <h3 className={`text-white text-xl font-medium ${activeMenu === 2 ? 'opacity-100' : 'opacity-70'}`}>{Element[2].menu}</h3>
                             </Link>
+
                         </div>
                     </div>
                     <div className="h-auto w-full self-end border-t border-t-white">
-                        <Link to="logout" className={`w-full h-16 flex items-center gap-2.5 rounded-lg hover:bg-customGray active:bg-customDarkerGray mt-2 ${activeMenu === 3 ? 'bg-customGray' : ''}`} onClick={(e) => handleMenuClick(3, e)}>
-                            <img src={Element[3].icon} alt="icon" className={`ml-4 w-7 ${activeMenu === 3 ? 'opacity-100' : 'opacity-70'}`} />
-                            <h3 className={`text-white text-xl font-medium ${activeMenu === 3 ? 'opacity-100' : 'opacity-70'}`}>{Element[3].menu}</h3>
+                        <Link to="logout" className={`w-full h-16 flex items-center gap-2.5 rounded-lg hover:bg-customGray active:bg-customDarkerGray mt-2 ${activeMenu === 4 ? 'bg-customGray' : ''}`} onClick={(e) => handleMenuClick(4, e)}>
+                            <img src={Element[4].icon} alt="icon" className={`ml-4 w-7 ${activeMenu === 4 ? 'opacity-100' : 'opacity-70'}`} />
+                            <h3 className={`text-white text-xl font-medium ${activeMenu === 4 ? 'opacity-100' : 'opacity-70'}`}>{Element[4].menu}</h3>
                         </Link>
                     </div>
                 </nav>

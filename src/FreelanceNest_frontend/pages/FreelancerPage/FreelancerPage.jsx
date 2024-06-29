@@ -6,6 +6,7 @@ import Jobs from "../FreelancerPage/Components/Jobs";
 import Profile from "../FreelancerPage/Components/Profile";
 import Logout from "../FreelancerPage/Components/Logout";
 import DetailJobs from "./Components/DetailJobs";
+import Project from "./Components/Project";
 
 function FreelancerPage(){
     return(
@@ -17,6 +18,7 @@ function FreelancerPage(){
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="jobs" element={<Jobs />} />
+          <Route path="project" element={<Project />} />
           <Route path="profile" element={<Profile />} />
           <Route path="logout" element={<Logout />} />
           <Route path="/jobs/:id" element={<DetailJobs/>} />
