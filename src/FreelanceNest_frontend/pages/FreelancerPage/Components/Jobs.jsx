@@ -1,21 +1,28 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "./Card";
-import Data from "./Data"
-import IcpCoin from "../assets/icon/icp-token.png"
-import Buttons from "./Buttons"
+import Data from "./Data";
+import IcpCoin from "../assets/icon/icp-token.png";
+import Buttons from "./Buttons";
 
 function Jobs() {
-    const [item, setItems] = useState(Data)
-    const menuItems =[...new Set(Data.map((val) => val.category))]
+    const [item, setItems] = useState(Data);
+    const menuItems = [...new Set(Data.map((val) => val.category))];
+    const navigate = useNavigate();
+
+    const handleCardClick = (id) => {
+        navigate(`/detailjob/${id}`);
+    };
+
     return (
         <div className="w-full h-full flex gap-12 flex-col mx-8">
             <div>
                 <h1 className="text-white text-7xl font-bold font-sans">Seek and Find Your <br /> Freelancing Opportunities Here!</h1>
             </div>
             <Buttons />
-            <Card item={item}/>
+            <Card item={item} onCardClick={handleCardClick} />
         </div>
-  );
+    );
 }
 
 export default Jobs;

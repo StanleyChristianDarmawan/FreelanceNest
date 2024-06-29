@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Sidebar from "../FreelancerPage/Components/Sidebar"
+import Sidebar from "../FreelancerPage/Components/Sidebar";
 import Home from "../FreelancerPage/Components/Home";
 import Jobs from "../FreelancerPage/Components/Jobs";
 import Profile from "../FreelancerPage/Components/Profile";
@@ -16,12 +16,12 @@ function FreelancerPage(){
       </div>
       <div className="m-10">
         <Routes>
-          <Route path="" element={<Home />} />
+          <Route path="home" element={<Home />} />
           <Route path="jobs" element={<Jobs />} />
           <Route path="project" element={<Project />} />
           <Route path="profile" element={<Profile />} />
           <Route path="logout" element={<Logout />} />
-          <Route path="/jobs/:id" element={<DetailJobs/>} />
+          <Route path="/detailjob/:id" element={<DetailJobs/>} />
         </Routes>
       </div>
     </div>

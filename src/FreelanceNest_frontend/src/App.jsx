@@ -17,7 +17,7 @@ function App() {
           <Route path="/user" element={<User />} />
           <Route path="/freelancer-regist" element={<FreelancerForm />} />
           <Route path="/company-regist" element={<CompanyForm />} />
-          <Route path="/freelancer-page/*" element={<FreelancerPage/>} />
+          <Route path="/*" element={<FreelancerPage/>} />
         </Routes>
       </Router>
     </div>

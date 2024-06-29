@@ -1,12 +1,12 @@
 import React from "react";
 import IcpCoin from "../assets/icon/icp-token.png"
 
-function Card({item}){
+function Card({item, onCardClick}){
     return(
         <div>
             <div className="flex gap-10 flex-wrap">
                 {item.map((val) => (
-                    <div key={val.id} className="w-64 h-80 bg-customLighterBlack rounded-md flex flex-wrap border border-white border-opacity-15 cursor-pointer">
+                    <div key={val.id} className="w-64 h-80 bg-customLighterBlack rounded-md flex flex-wrap border border-white border-opacity-15 cursor-pointer" onClick={() => onCardClick(val.id)}>
                         <div className="flex w-full h-1/5 border-b border-b-white flex-row items-center gap-2">
                             <img src={val.img} alt="" className="w-16 ml-2"/>
                             <div className="flex flex-col mr-2">

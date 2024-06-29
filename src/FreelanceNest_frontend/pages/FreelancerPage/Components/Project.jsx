@@ -1,11 +1,12 @@
 import React from "react";
 
-function Project(){
-    return(
-        <>
-        <h1 className="text-white">Project</h1>
-        </>
-    )
+function Project() {
+    return (
+        <div>
+            <h1>Project Page</h1>
+            {/* ... kode lainnya ... */}
+        </div>
+    );
 }
 
 export default Project;

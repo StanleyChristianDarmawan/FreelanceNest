@@ -1,11 +1,12 @@
 import React from "react";
 
-function Logout(){
-    return(
-        <>
-        <h1>Logout</h1>
-        </>
+function Logout() {
+    return (
+        <div>
+            <h1>Logout Page</h1>
+            {/* ... kode lainnya ... */}
+        </div>
     );
-};
+}
 
 export default Logout;

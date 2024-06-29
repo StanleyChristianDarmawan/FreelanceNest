@@ -1,11 +1,12 @@
 import React from "react";
 
-function Home(){
-    return(
-        <>
-        <h1>Homepage</h1>
-        </>
+function Home() {
+    return (
+        <div>
+            <h1>Home Page</h1>
+            {/* ... kode lainnya ... */}
+        </div>
     );
-};
+}
 
 export default Home;
